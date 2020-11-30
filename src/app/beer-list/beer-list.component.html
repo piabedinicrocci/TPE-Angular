@@ -9,26 +9,12 @@
         </tr>
     </thead>
     <tbody class="cuerpo">
-        <tr>
+        <tr *ngFor="let beer of beers">
             <td><img [src]="beer.image" [alt]="beer.name"></td>
             <td>{{beer.name}}</td>
             <td>{{beer.type}}</td>
             <td>{{beer.stock}}</td>
             <td>{{beer.price}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="beer.image" [alt]="beer.name"></td>
-            <td>Rubia</td>
-            <td>Honey</td>
-            <td>2</td>
-            <td>$231</td>
-        </tr>
-        <tr>
-            <td><img [src]="beer.image" [alt]="beer.name"></td>
-            <td>Negra Juerte</td>
-            <td>Porter</td>
-            <td>6</td>
-            <td>$312</td>
         </tr>
     </tbody>
 </table>
