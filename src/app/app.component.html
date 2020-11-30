@@ -1,4 +1,37 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<!--ENCABEZADO-->
+<figure>
+  <img class="banner" src="assets/img/banner.PNG" alt="Banner">
+</figure>
+
+<!--BARRA DE NAVEGACIÓN-->
+<nav class="botonera">
+  <ul class="menu">
+      <a><img class="logoencabezado" src="assets/img/logo.PNG" alt="logo"></a>
+      <li class="botones"><a href="index.html">home</a></li>
+      <li class="botones"><a href="comocomprar.html">como comprar</a></li>
+      <li class="botones"><a href="nodisponible.html">contacto</a></li>
+      <li class="botones"  id="productos"><a href="#">productos</a></li>
+  </ul>
+</nav> 
+
+<!--CONTENIDO-->
+<div class="contenido">
+  <div class="lista">
+    <app-beer-list></app-beer-list>
+  </div>
+  <div class="carritocompras">
+    <app-shopping-cart></app-shopping-cart>
+  </div>
+</div>  
+<!--PIE DE PÁGINA-->
+<footer>
+  <div class="socialmedia">
+      <a href="http://wa.me/5492281590130" target="_blank"><img class="iconsocialmedia" src="assets/img/whatsapp.png" alt="Whatsapp"></a>
+      <a href="https://www.facebook.com/ZafiroAccesorioss/" target="_blank"><img class="iconsocialmedia" src="assets/img/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/zafiro_accs/" target="_blank"><img class="iconsocialmedia" src="assets/img/instagram.png" alt="Instagram"></a>
+      <a href="https://twitter.com/" target="_blank"><img class="iconsocialmedia" src="assets/img/twitter.png" alt="Twitter"></a>
+      <a href="https://ar.pinterest.com/" target="_blank"> <img class="iconsocialmedia" src="assets/img/pinterest.png" alt="Pinterest"></a>
+      <a href="https://outlook.live.com/mail/0/inbox" target="_blank"><img class="iconsocialmedia" src="assets/img/email.png" alt="Email"></a>
+      <a href="https://www.google.com/maps/" target="_blank"><img class="iconsocialmedia" src="assets/img/ubicacion.png" alt="Ubicacion"></a>
+  </div>
+</footer>

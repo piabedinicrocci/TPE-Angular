@@ -1,0 +1,23 @@
+*{
+    background-color: cyan;
+}
+
+tr{
+    color: black;
+    border: 4px red;
+    background-color: rebeccapurple;
+    border-style: dashed;
+    text-align: center;
+}
+
+table{
+    border: 4px red;
+}
+
+th, td{
+    border: 4px red;
+}
+
+thead, tbody{
+    border: 4px red;
+}
