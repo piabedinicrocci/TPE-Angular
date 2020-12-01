@@ -13,22 +13,25 @@ export class BeerListComponent implements OnInit {
       image: 'assets/img/ipa.jpg',
       name: 'Rubiasa',
       type: 'IPA',
+      price: 123,
       stock: 5,
-      price: 123
+      offer: false,
     },
     {
       image: 'assets/img/ipa.jpg',
       name: 'Rubia',
       type: 'Honey',
+      price: 231,
       stock: 2,
-      price: 231
+      offer: true,
     },
     {
       image: 'assets/img/ipa.jpg',
       name: 'Negra',
       type: 'Porter',
+      price: 312,
       stock: 0,
-      price: 312
+      offer: false,
     },
   ];
   

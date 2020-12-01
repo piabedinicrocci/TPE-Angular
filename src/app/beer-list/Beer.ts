@@ -4,4 +4,5 @@ export interface Beer {
     type: string;
     price: number;
     stock: number;
+    offer: boolean;
 }

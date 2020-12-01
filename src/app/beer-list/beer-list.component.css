@@ -1,23 +1,23 @@
 *{
-    background-color: cyan;
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    border: 1px solid black;
 }
 
 tr{
     color: black;
-    border: 4px red;
     background-color: rebeccapurple;
-    border-style: dashed;
     text-align: center;
 }
 
-table{
-    border: 4px red;
+td, th{
+    border-bottom: 1px solid rgb(26, 25, 25);
 }
 
-th, td{
-    border: 4px red;
-}
-
-thead, tbody{
-    border: 4px red;
+/*RESALTADO SEGUN BOOLEANO*/
+.offer{
+    background-color: red;
 }

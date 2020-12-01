@@ -4,17 +4,17 @@
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
-            <th>Stock</th>
             <th>Precio</th>
+            <th>Stock</th>
         </tr>
     </thead>
     <tbody class="cuerpo">
-        <tr *ngFor="let beer of beers">
+        <tr *ngFor="let beer of beers" [ngClass]="{'offer': beer.offer}">
             <td><img [src]="beer.image" [alt]="beer.name"></td>
-            <td>{{beer.name}}</td>
+            <td>{{beer.name | uppercase}}</td>
             <td>{{beer.type}}</td>
-            <td>{{beer.stock}}</td>
-            <td>{{beer.price}}</td>
+            <td>{{beer.price | currency}}</td>
+            <td><span *ngIf="beer.stock==0">STOCK AGOTADO</span></td>
         </tr>
     </tbody>
 </table>
