@@ -5,16 +5,26 @@ import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
+import { FormsModule } from '@angular/forms';
+import { BeerhouseAboutComponent } from './beerhouse-about/beerhouse-about.component';
+import { BeerhouseBeersComponent } from './beerhouse-beers/beerhouse-beers.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    BeerhouseAboutComponent,
+    BeerhouseBeersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

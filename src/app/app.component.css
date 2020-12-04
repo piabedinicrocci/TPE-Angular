@@ -35,11 +35,6 @@
     background-color: rgb(211, 211, 211);
 }
 
-/*CONTENIDO*/
-.contenido{
-    display: flex;
-}
-
 /*PIE DE PÁGINA*/
 .socialmedia{
     display: flex;

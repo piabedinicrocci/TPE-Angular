@@ -6,15 +6,21 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody class="cuerpo">
         <tr *ngFor="let beer of beers" [ngClass]="{'offer': beer.offer}">
-            <td><img [src]="beer.image" [alt]="beer.name"></td>
+            <td><img width="100" [src]="beer.image" [alt]="beer.name"></td>
             <td>{{beer.name | uppercase}}</td>
             <td>{{beer.type}}</td>
             <td>{{beer.price | currency}}</td>
             <td><span *ngIf="beer.stock==0">STOCK AGOTADO</span></td>
+            <td>
+                <button (click)="downQuantity(beer)">-</button>
+                <input type="text" [(ngModel)]="beer.quantity" (keyup)="changeQuantity($event, beer)">
+                <button (click)="upQuantity(beer)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>

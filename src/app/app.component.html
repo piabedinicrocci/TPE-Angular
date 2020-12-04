@@ -7,22 +7,18 @@
 <nav class="botonera">
   <ul class="menu">
       <a><img class="logoencabezado" src="assets/img/logo.PNG" alt="logo"></a>
-      <li class="botones"><a href="index.html">home</a></li>
-      <li class="botones"><a href="comocomprar.html">como comprar</a></li>
-      <li class="botones"><a href="nodisponible.html">contacto</a></li>
+      <li class="botones"><a [routerLink]="['/']">home</a></li>
+      <li class="botones"><a [routerLink]="['/']">como comprar</a></li>
+      <li class="botones"><a [routerLink]="['/about']">contacto</a></li>
       <li class="botones"  id="productos"><a href="#">productos</a></li>
   </ul>
 </nav> 
 
 <!--CONTENIDO-->
-<div class="contenido">
-  <div class="lista">
-    <app-beer-list></app-beer-list>
-  </div>
-  <div class="carritocompras">
-    <app-shopping-cart></app-shopping-cart>
-  </div>
-</div>  
+<div>
+  <router-outlet></router-outlet>
+</div>
+
 <!--PIE DE PÁGINA-->
 <footer>
   <div class="socialmedia">
