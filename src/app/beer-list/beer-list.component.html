@@ -6,6 +6,7 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Cantidad</th>
             <th>Compra</th>
         </tr>
     </thead>
@@ -16,11 +17,8 @@
             <td>{{beer.type}}</td>
             <td>{{beer.price | currency}}</td>
             <td><span *ngIf="beer.stock==0">STOCK AGOTADO</span></td>
-            <td>
-                <button (click)="downQuantity(beer)">-</button>
-                <input type="text" [(ngModel)]="beer.quantity" (keyup)="changeQuantity($event, beer)">
-                <button (click)="upQuantity(beer)">+</button>
-            </td>
+            <td><app-input-number [(quantity)]="beer.quantity" [max]="beer.stock" *ngIf="beer.stock" (maxReached)="maxReached($event)"></app-input-number></td>
+            <td><button (click)="addToCart(beer)">Comprar</button></td>
         </tr>
     </tbody>
 </table>

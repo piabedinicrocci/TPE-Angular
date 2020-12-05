@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { BeerhouseAboutComponent } from './beerhouse-about/beerhouse-about.component';
 import { BeerhouseBeersComponent } from './beerhouse-beers/beerhouse-beers.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     BeerListComponent,
     ShoppingCartComponent,
     BeerhouseAboutComponent,
-    BeerhouseBeersComponent
+    BeerhouseBeersComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,

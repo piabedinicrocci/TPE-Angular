@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BeerShoppingCartService } from '../beer-shopping-cart.service';
 import { Beer } from './Beer';
 
 @Component({
@@ -13,7 +14,7 @@ export class BeerListComponent implements OnInit {
       image: 'assets/img/ipa.jpg',
       name: 'Rubiasa',
       type: 'IPA',
-      price: 123,
+      price: 345,
       stock: 5,
       offer: false,
       quantity: 0,
@@ -22,7 +23,7 @@ export class BeerListComponent implements OnInit {
       image: 'assets/img/ipa.jpg',
       name: 'Rubia',
       type: 'Honey',
-      price: 231,
+      price: 123,
       stock: 2,
       offer: true,
       quantity: 0,
@@ -38,23 +39,19 @@ export class BeerListComponent implements OnInit {
     },
   ];
   
-  constructor() { }
+  constructor(private cart: BeerShoppingCartService){
+  }
 
   ngOnInit(): void {
   }
 
-  upQuantity(beer: Beer): void {
-    if (beer.quantity < beer.stock)
-      beer.quantity++;
+  addToCart(beer): void{
+    this.cart.addToCart(beer);
+    beer.stock -= beer.quantity;
+    beer.quantity = 0;
   }
 
-  downQuantity(beer: Beer): void {
-    if (beer.quantity > 0)
-      beer.quantity--;
+  maxReached(m: string){
+    alert(m);
   }
-
-  changeQuantity(event, beer: Beer): void {
-    console.log(event.key);
-  }
-
 }
