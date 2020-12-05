@@ -1,4 +1,21 @@
 <h3>Carrito de Compras</h3>
-<ul>
-    <li *ngFor="let beer of (shopList$ | async)">{{beer.name}}: {{beer.quantity}}</li>
-</ul>
+<table>
+    <thead class="cabecera">
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody class="cuerpo">
+        <tr *ngFor="let beer of (shopList$ | async)">
+            <td><img width="100" [src]="beer.image" [alt]="beer.name"></td>
+            <td>{{beer.name | uppercase}}</td>
+            <td>{{beer.type}}</td>
+            <td>{{beer.price | currency}}</td>
+            <td>{{beer.quantity}}</td>
+        </tr>
+    </tbody>
+</table>
