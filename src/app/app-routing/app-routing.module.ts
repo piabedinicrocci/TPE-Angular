@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BeerhouseAboutComponent } from 'src/app/beerhouse-about/beerhouse-about.component';
-import { BeerhouseBeersComponent } from 'src/app/beerhouse-beers/beerhouse-beers.component';
+import { BeerhouseAboutComponent } from '../../../src/app/beerhouse-about/beerhouse-about.component';
+import { BeerhouseBeersComponent } from '../../../src/app/beerhouse-beers/beerhouse-beers.component';
 
 const routes: Routes = [
   {
